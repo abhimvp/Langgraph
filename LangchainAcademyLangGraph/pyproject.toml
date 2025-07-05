@@ -1,0 +1,16 @@
+[project]
+name = "langchainacademylanggraph"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=0.3.26",
+    "pydantic>=2.11.7",
+    "requests>=2.32.4",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
