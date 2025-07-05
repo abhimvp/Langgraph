@@ -29,3 +29,5 @@
 (my approach is different in learning courses and write everything I need to understand it right and will take it slow - step by step - 1% better everyday)
 
 - Go to **LangchainAcademyLangGraph** folder for more.
+
+- Also updating every resource with latest version 3 URL.

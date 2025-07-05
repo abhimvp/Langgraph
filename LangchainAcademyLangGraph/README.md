@@ -2,6 +2,32 @@
 
 This course is divided into six modules, starting with the basics and gradually progressing to more advanced topics.
 
+- Set up LangGraph Studio:
+  LangGraph Studio is a custom IDE for viewing and testing agents.
+  Studio can be run locally and opened in your browser on Mac, Windows, and Linux.
+  See documentation here on the local Studio development server and here.
+  Graphs for LangGraph Studio are in the module-x/studio/ folders.
+  To start the local development server, **run the following command in your terminal in the /studio directory each module:**
+  `langgraph dev`
+  You should see the following output:
+
+  - 🚀 API: http://127.0.0.1:2024
+  - 🎨 Studio UI: https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024
+  - 📚 API Docs: http://127.0.0.1:2024/docs
+
+- Open your browser and navigate to the Studio UI: https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024
+
+To use Studio, you will need to create a .env file with the relevant API keys
+Run this from the command line to create these files for module 1 to 6, as an example:
+
+```cmd
+for i in {1..6}; do
+  cp module-$i/studio/.env.example module-$i/studio/.env
+  echo "OPENAI_API_KEY=\"$OPENAI_API_KEY\"" > module-$i/studio/.env
+done
+echo "TAVILY_API_KEY=\"$TAVILY_API_KEY\"" >> module-4/studio/.env
+```
+
 ## Setup
 
 - **`Python version:`** To get the most out of this course, please ensure you're using `Python 3.11`. This version is required for best compatibility with LangGraph. If you're on an older version, upgrading will ensure everything runs smoothly.
