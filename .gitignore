@@ -1,5 +1,8 @@
 .ipynb_checkpoints/
 
+#studio files
+.langgraph_api
+
 .idea/
 
 # Byte-compiled / optimized / DLL files
