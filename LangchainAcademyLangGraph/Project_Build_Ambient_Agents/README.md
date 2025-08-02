@@ -52,6 +52,84 @@ This repository serves as a comprehensive learning journal, capturing:
   - LangSmith for observability & evaluation
   - LangGraph platform for deployment & LangGraph Studio for visual & debugging
 
+#### Key Insights on Chat vs Ambient Agents
+
+**Chat Agent Characteristics:**
+
+- Chat is a familiar user-interaction pattern for agents - where users request something of an agent → which can call various tools & respond to the user with an output
+- But there are lot of tasks for which chat isn't quite appropriate →
+- Example: many users don't want to actually tell an agent to do something
+- They want agent to listen precisely to certain events and respond to them automatically
+
+**Ambient Agent Requirements:**
+
+- Many times, we don't want agents to only handle one request at a time → we want them to handle many events concurrently
+- Sometimes we want agents to do work in the background for us & only notify us at specific points like when the work has been done, when they need clarification on something (or) when they want to notify us about something
+
+#### Understanding Ambient Agents - Latency Requirements
+
+- Ambient agents can take longer as they working background & only notify us when needed
+- In this course, we're gonna build an Ambient agent that:
+  - Can handle emails: we will build an agent that can effectively manage your email inbox
+  - It will trigger incoming emails and perform actions like:
+    - Chat responses (or) schedule meetings
+- Now since these are sensitive tasks, we're gonna also how to use human-in-the-loop to approve certain agent actions
+- We'll also introduce memory - so agent learns from feedback over-times
+
+#### Core Concepts Covered
+
+**Central Concepts in Tool Calling:**
+
+- **Workflows**: Make decisions along predefined code path
+- **Agent**: Tool calling in a loop
+
+**LangGraph Features:**
+
+- LangGraph has a persistence layer for HTTP client-term memory
+- Before this we conducted the fundamentals of what first-
+- Look at langgraph-101.ipynb
+
+#### Practical Implementation Summary
+
+**What We Built in `langgraph_101.ipynb`:**
+
+1. **Chat Models & Tool Integration**
+
+   - Set up Google Gemini 2.5-flash model using LangChain's standardized interface
+   - Created custom tools using `@tool` decorator (email writing functionality)
+   - Implemented tool calling with `bind_tools()` method
+
+2. **Basic Workflow Construction**
+
+   - Built simple state-based workflows using `StateGraph`
+   - Defined state schemas with TypedDict for type safety
+   - Created nodes as Python functions that process and update state
+
+3. **Agent Implementation**
+
+   - Constructed a tool-calling agent using conditional edges
+   - Implemented routing logic with `should_continue()` function
+   - Used `MessagesState` for conversation flow management
+
+4. **Advanced Features**
+
+   - **Persistence**: Implemented checkpointing with `InMemorySaver` for conversation continuity
+   - **Interrupts**: Built human-in-the-loop functionality using `interrupt()` and `Command` objects
+   - **Pre-built Agents**: Utilized LangGraph's `create_react_agent` for rapid prototyping
+
+5. **Observability & Deployment**
+   - Integrated LangSmith tracing for monitoring agent execution
+   - Explored LangGraph Platform deployment options
+   - Visualized graph structures using mermaid diagrams
+
+**Key Technical Learnings:**
+
+- State management through reducers and custom update logic
+- Graph compilation and execution patterns
+- Thread-based conversation persistence
+- Integration patterns with external model providers
+- Visual debugging capabilities with LangGraph Studio
+
 ## Getting Started
 
 ### Prerequisites
