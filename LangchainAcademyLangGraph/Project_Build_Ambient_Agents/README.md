@@ -130,6 +130,88 @@ This repository serves as a comprehensive learning journal, capturing:
 - Integration patterns with external model providers
 - Visual debugging capabilities with LangGraph Studio
 
+### Module 2: Building Agents
+
+In this module we'll walk through building our email assistant from scratch.
+
+We'll begin by building a router - which determines whether or not an email requires a response.
+
+If the email does require the response, we'll route it to an agent.
+
+- We're then going to build that agent, which can call various tools to response to emails
+  - such as a tool to reply
+  - a tool to check the calendar
+  - a tool to schedule a meeting
+
+And finally we'll connect these two together, creating an overall assistant that can triage incoming emails and route any email worth responding to our agent.
+
+- By the end of this module, you'll have a clear practical map for building agents with LangGraph.
+
+#### Building the Complete Email Ambient Agent
+
+![alt text](img/image.png)
+
+We'll build an ambient agent that can manage your email through four key components:
+
+1. **The Agent Core (LangGraph)** - _shown in blue_
+
+   - The foundational agent built with LangGraph that handles email processing and decision-making
+
+2. **Testing & Evaluation (LangSmith)** - _shown in orange_
+
+   - Comprehensive testing framework using LangSmith to ensure agent reliability and performance
+
+3. **Human-in-the-Loop Integration**
+
+   - Adding human oversight and approval mechanisms for sensitive email operations
+
+4. **Memory & Learning System**
+   - Implementing memory capabilities to learn user preferences and improve responses over time
+
+#### Agent Development Process
+
+**Building the Agent with LangGraph:**
+
+Now for building the agent itself, we're going to use LangGraph as we've introduced. We're going to showcase how you can combine an agent and specific workflow components - notably a router together - into a functioning system. While building this, we're going to be making use of LangGraph Studio as you saw previously as well.
+
+**The Critical Question: Is Your Agent Ready for Production?**
+
+Now with this agent built, would you actually turn it on? Many people would probably say no - that's where testing comes in.
+
+**Why Testing is Essential:**
+
+This is a survey we put out last year asking around 1,400 professionals about the major challenges associated with building and productionizing agents. Many mentioned:
+
+- Performance
+- Quality
+- Cost
+- Safety
+- Latency
+
+For these reasons, testing to benchmark the performance of our agent is going to be very important. We'll show you:
+
+- How to build datasets in LangSmith
+- How to build tests in LangSmith
+- How we can use this to actually benchmark the performance of our agent
+
+**Human-in-the-Loop Integration:**
+
+For an agent like this with oversight over our email, the cost of error is very high. So we're going to show how to incorporate human-in-the-loop with our agent:
+
+- We'll add human loop for particularly sensitive actions like certain tool calls
+- We'll show Agent Inbox as a lightweight UX for this - our agent will simply send all notifications to Inbox where we can review, approve, or edit specific tool calls like sending the email itself
+- Based upon the feedback we give the agent in Inbox, we're going to then update the agent's memory so it can learn our preferences over time
+
+#### Building the Agent Core
+
+Now we will build the Agent (Blue box in the image.)
+
+The complete implementation and detailed walkthrough can be found in the notebooks directory: `agent.ipynb`
+
+![alt text](img/image-2.png)
+
+![alt text](img/image-3.png)
+
 ## Getting Started
 
 ### Prerequisites
