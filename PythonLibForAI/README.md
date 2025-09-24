@@ -60,3 +60,27 @@ Using Python 3.12.7 environment at: pythonlib
 - we look into `except` block -> which will handle any exceptions that occurred in the try block.
 - You can indent the response printed from response.json() to make it more readable using JSON.dumps() that allows you to make it more readable.`print(json.dumps(response.json(), indent=4))`.
 - Always wrap your requests in a try except block.
+
+## Managing HTTP Authentication and Headers (GEMINI API)
+
+- In `requests_authentication.py`: We will look into HTTP headers, the POST method & managing authentication.
+- Many API's require Authentication -> we will send a request to GEMINI AI API to get a response from a model.
+- So to interact with Gemini AI models we need an API Key. This Key Authenticates and grants access to Gemini-flash or pro models. You can get the API Key from [here](https://aistudio.google.com/app/apikey).
+- As a best practice always store API keys in your environment variables to keep them secure. Never hardcode sensitive credentials into your scripts
+- `uv pip install -q -U google-genai`
+
+```bash
+(pythonlib)
+abhis@Tinku MINGW64 ~/Desktop/Langgraph/Langgraph/PythonLibForAI (main)
+$ uv run requests_authentication.py
+An error occurred: 401 Client Error: Unauthorized for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent #when we have used Authorization in the headers when we should be using - "x-goog-api-key": GEMINI_API_KEY
+(pythonlib)
+abhis@Tinku MINGW64 ~/Desktop/Langgraph/Langgraph/PythonLibForAI (main)
+$ uv run requests_authentication.py
+Predict next word based on patterns in vast text data.
+# To make your script use the key from the .env file, you must use the --env-file flag with the uv run command
+(pythonlib)
+abhis@Tinku MINGW64 ~/Desktop/Langgraph/Langgraph/PythonLibForAI (main)
+$ uv run --env-file .env -- python requests_authentication.py
+They predict the most probable next word based on statistical patterns learned from vast text data.
+```
