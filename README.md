@@ -2,7 +2,12 @@
 
 ![LangChain Academy](<https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/66e9eba1020525eea7873f96_LCA-big-green%20(2).svg>)
 
-- Master Custom AI Agent creation
+## DeepAgents
+
+- [LearningFrom](https://github.com/langchain-ai/deepagents)
+
+## Master Custom AI Agent creation
+
 - `LangGraph` is an orchestration framework for complex agentic systems and is more low-level and controllable than LangChain agents. On the other hand, `LangChain` provides a standard interface to interact with models and other components, useful for straight-forward chains and retrieval flows.
 - `LangGraph Platform` is a platform for deploying AI agents that can scale with production volume. It `offers easy-to-use APIs for managing agent state, memory, and user interactions`— which makes building dynamic experiences more accessible. ‍ Once you're ready to ship to production, use LangGraph Platform to gracefully handle large workloads, with features like retries and cost-efficient execution for reliable performance. LangGraph Platform also includes `LangGraph Studio`, which lets you gain visibility into how agents act, helping you prototype faster.
 
