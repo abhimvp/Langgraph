@@ -42,3 +42,21 @@ LANGSMITH_PROJECT=deep-agents-from-scratch
 
 - We'll be using the set of notebooks located [here](https://github.com/langchain-ai/deep-agents-from-scratch.git). Each module will also include links to the corresponding notebooks.
 - i will be working on this `deep-agents-from-scratch-main` directory.
+
+## Module - 2 : Create React Agent
+
+```bash
+abhis@Tinku MINGW64 ~/Desktop/Langgraph/Langgraph/deep-agents-from-scratch-main
+uv sync
+Creating virtual environment...
+Virtual environment created at ./.venv
+Installing dependencies...
+abhis@Tinku MINGW64 ~/Desktop/Langgraph/Langgraph/deep-agents-from-scratch-main
+source .venv/Scripts/activate
+(deep-agents-from-scratch)
+abhis@Tinku MINGW64 ~/Desktop/Langgraph/Langgraph/deep-agents-from-scratch-main (main)
+$ #let's go
+```
+
+- Notebook Reference: `0_create_agent.ipynb`
+- Refer offline Notes for Module - 2 & also understand things step by step and why we have some code or pre-built things doing?
