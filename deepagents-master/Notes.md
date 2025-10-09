@@ -60,3 +60,7 @@ $ #let's go
 
 - Notebook Reference: `0_create_agent.ipynb`
 - Refer offline Notes for Module - 2 & also understand things step by step and why we have some code or pre-built things doing?
+
+## Module - 3 : Todo Lists
+
+- Notebook Reference: 1_todo.ipynb
