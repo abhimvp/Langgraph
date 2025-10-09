@@ -1,3 +1,8 @@
+# Not uploading the personal notes.md and pdf's to repository
+
+# Notes.md
+/PDFs/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
