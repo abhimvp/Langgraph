@@ -33,8 +33,12 @@ LANGSMITH_PROJECT=deep-agents-from-scratch
   - Context isolation through sub-agent delegation
 
 - Refer offline notes for module - 1
+
   - 4 principles to keep in mind while building agents:
     - Planning
     - Offload context
     - Task Delegation
     - prompt engineering
+
+- We'll be using the set of notebooks located [here](https://github.com/langchain-ai/deep-agents-from-scratch.git). Each module will also include links to the corresponding notebooks.
+- i will be working on this `deep-agents-from-scratch-main` directory.
